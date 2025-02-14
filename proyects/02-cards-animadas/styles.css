@@ -1,7 +1,14 @@
+:root {
+    --main-font: Arial, Helvetica, sans-serif;
+    --color-cards: hsl(240, 55%, 60%);
+    --color-footer:hsl(65 55% 60%);
+    --color-footer-hover:hsl(65 60% 65%);
+}
+
 body {
     margin:0;
     padding:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
 }
 
 .cards {
@@ -11,7 +18,7 @@ body {
 }
 
 .cards .card {
-    background-color: hsl(240, 55%, 60%);
+    background-color: var(--color-cards);
     color:white;
     width: 300px;
     height: 350px;
@@ -22,19 +29,20 @@ body {
     display:flex;
     flex-direction: column;
     transition: all .3s ease;
-    box-shadow: -3x 0 10px rgb(0 0 0 / .3),
-    -4x 0 10px rgb(0 0 0 / .2),
-    -5x 0 10px rgb(0 0 0 / .1);
+    box-shadow: -3px 0 10px rgb(0 0 0 / .3),
+                -4px 0 10px rgb(0 0 0 / .2),
+                -5px 0 10px rgb(0 0 0 / .1);
+    text-wrap: balance;
 }
 
 .cards .card a {
-    color: hsl(65 55% 60%);
+    color: var(--color-footer);
     text-decoration: none;
     font-weight: bold;
 }
 
 .cards .card a:hover {
-    color: hsl(65 60% 65%)
+    color: var(--color-footer-hover);
 }
 
 .cards .card .header {
@@ -44,8 +52,8 @@ body {
 .cards .card:hover {
     margin-right: 80px;
     transform: rotate(3deg) translateY(-15px);
+    cursor: pointer;
 }
-
 
 .cards .card .header .data {
     padding: 10px 0;
@@ -58,4 +66,3 @@ body {
 .cards .card[class*="element"]{
     margin-left: -100px;
 }
-
