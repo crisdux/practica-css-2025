@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -31,89 +32,7 @@
             </section>
         </nav>
     </header>
-
-    <style>
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-            margin: 0;
-        }
-
-        body {
-            background-color: #eee;
-            font-size: 1.2rem;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: white;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #222;
-            padding: 1em;
-            position: relative;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            width: 100%;
-            text-align: center;
-            display: none;
-        }
-
-        @media (min-width: 500px) {
-            .nav-links {
-                display: flex;
-                flex-direction: row;
-                position: static;
-                gap: 20px;
-                transition: all .5 ease-in;
-            }
-
-            .navbar .burguer-icon {
-                display: none;
-            }
-        }
-
-
-        .nav-links a {
-            text-decoration: none;
-            transition: background-color .3s ease-in;
-        }
-
-        .nav-links a:hover {
-            background-color: #222;
-            color: white;
-        }
-
-        .navbar .burguer-icon {
-            cursor: pointer;
-        }
-
-        .navbar .burguer-icon:active {
-            transform: scale(.9);
-        }
-
-        .show-menu {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-
-    <script>
-        let burguer_icon = document.querySelector("#burguer-icon");
-        let nav_links = document.querySelector("#nav-links");
-
-        burguer_icon.addEventListener("click", (event) => {
-            nav_links.classList.toggle("show-menu");
-        })
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
