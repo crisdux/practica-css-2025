@@ -1,0 +1,134 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding:0;
+}
+
+.modal-container{
+    background-color: rgb(0 0 0 /.4);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal {
+        width: 600px;
+        background-color: white;
+        padding: 25px 20px 20px 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 10px rbg(63 63 63 /.5);
+
+        .actions {
+            padding: 10px 0;
+            display: flex;
+            justify-content: end;
+            gap:10px;
+        }
+
+        .actions button[class*="btn-"]{
+            border: none;
+            padding: 15px;
+            min-width: 120px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .actions .btn-confirm {
+            background-color: #0684c4;
+            color:white;
+
+            transition: all .3s ease-in-out;
+        }
+
+        .actions .btn-confirm:hover {
+            background-color: #056797;
+            color:white;
+        }
+
+        .actions .btn-confirm:active{
+            background-color: #2e52b6;
+            color:white;
+        }
+
+        .actions .btn-cancel {
+            background-color: white;
+            border: solid 1px #ccc !important;
+            color:black;
+        }
+
+        .actions .btn-cancel:hover {
+            background-color: #eee;
+            border: solid 1px #ccc !important;
+            color:black;
+        }
+
+        .actions .btn-cancel:active {
+            background-color: #ccc;
+            border: solid 1px #ccc !important;
+            color:black;
+        }
+    }
+
+    .content{
+        display: flex;
+        gap:10px;
+        align-items: center;
+        flex:1;
+        margin-bottom: 20px;
+    }
+
+    .icon{
+       margin-right: 10px; 
+       color: rgb(21, 143, 21);
+    }
+
+    .message .text {
+        color: #222;
+        font-size: 20px;
+    }
+
+    .message .title {
+        font-weight: bold;
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    .message .title h3 {
+        margin:0;
+    }
+}
+
+@media (width < 600px){
+    .modal-container .modal {
+        width: 90%;
+
+        .actions{
+            flex-direction: column;
+        }
+    }
+
+    .modal-container {
+        align-items: flex-start;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
