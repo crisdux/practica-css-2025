@@ -1,0 +1,167 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    background-color: #222;
+    color:white;
+
+
+}
+
+
+
+.profile-container {
+    width: 70px;
+    margin:100px auto;
+
+
+    .profile img {
+        width:70px;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .profile .info {
+        position: absolute;
+        width: 340px;
+        min-height: 300px;
+        max-height: 380px;
+        background-color: #333;
+        color:white;
+        border-radius: 20px;
+        padding:20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgb(255 255 255 / .2);
+        display:none;
+        flex-direction: column;
+
+    }
+
+    .profile:hover .info{
+        display:flex;
+        cursor: pointer;
+        animation: show .3s ease-in-out;
+    }
+
+    .profile a {
+        color:white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .profile .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile .header img {
+        width: 60px;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .profile .header button {
+        min-width: 100px;
+        padding:10px;
+        border-radius: 20px;
+        background-color: white;
+        border:none;
+        cursor: pointer;
+        font-weight: bold;
+        color:black;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    .profile .user-info {
+        padding:10px 0;
+
+        .name {
+            font-weight: bolder;
+            letter-spacing: .1rem;
+        }
+
+        .username {
+            color:#aaa;
+        }
+    }
+
+    .profile .description {
+        padding:10px 0 20px 0;
+        flex:1;
+
+        a {
+            text-decoration: none;
+            color: rgb(0 140 255);
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: rgb(2, 100, 180);
+            }
+        }
+    }
+
+    .profile .followers-container{
+        display: flex;
+        gap:10px;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .number {
+            font-weight: bolder;
+        }
+
+        a {
+            color: #aaa;
+        }
+    }
+
+    .profile .other {
+        padding: 10px 0;
+
+        a {
+            color: #999;
+            display:flex;
+        }
+
+        a .photos {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: start;
+            margin-right: 25px;
+        }
+
+        a .photos img {
+           width: 32px;
+           height: 32px; 
+           border: solid 4px #222;
+           margin-right: -20px;
+        }
+    }
+
+    .profile .names {
+        line-height: 1.1;
+    }
+
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
